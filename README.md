@@ -14,9 +14,9 @@ I've done a few of these:
 - JVM/Dropwizard: https://github.com/jasonray/dropwizard-starterkit
 - JVM/Jersey: https://github.com/jasonray/jersey-starterkit
 
-I've concluded that I love Dropwizard.  Anytime I ever do a Java based web service based project, I will continue to use it.  Love it.
+I've concluded that I love [Dropwizard](https://dropwizard.github.io/dropwizard/).  Anytime I ever do a Java based web service based project, I will continue to use it.  Love it.
 
-As far as node.js based web services, I find express, restify, and connect to be nearly equivilent, with a slight preference for express.
+As far as node.js based web services, I find [express.js](http://expressjs.com), [restify](http://mcavage.me/node-restify/), and connect to be nearly equivilent, with a slight personal preference for express.
 
 
 Quick intro into node.js for java developers
