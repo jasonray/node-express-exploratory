@@ -154,6 +154,9 @@ Return a response
 
 Other reference
 ===============
+NPM
+---
+
 Log HTTP requests
 -----------------
 [Morgan](https://github.com/expressjs/morgan) is an middleware component that logs the HTTP requests.
@@ -171,10 +174,13 @@ GET /public/index.html 200  11ms
 ```
 
 Command line arguments
+----------------------
 
 Make http request
+-----------------
 
 Fork / multi-process
+--------------------
 
 
 
