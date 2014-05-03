@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var httpPort = 8888;
+var adminHttpPort = 8889;
 
 var logger = require('bunyan').createLogger({
 	name: "server"
@@ -28,6 +29,11 @@ var metrics = require('statman');
 app.use('/api', metrics.httpFilters.metricCollectionFilter);
 app.use('/public', metrics.httpFilters.metricCollectionFilter);
 
+var util = require('util');
+metrics.register(new metrics.gauge('node-memory', function() {
+	return util.inspect(process.memoryUsage());
+}));
+
 // this would represent an expensive resource with 2000ms latency
 app.get('/api/fetch/expensive', function(req, res, next) {
 	// logger.info('begin resource processing, fetch data which will take 1s');
@@ -51,8 +57,12 @@ app.get('/public/hello', function(req, res, next) {
 	res.end('hello world\n');
 });
 
-app.get('/admin/stats', metrics.httpFilters.metricOutputResource);
-
 app.listen(httpPort, function() {
-	logger.info("now listening on %s", httpPort);
+	logger.info("application now listening on %s", httpPort);
+});
+
+var adminapp = express();
+adminapp.get('/admin/stats', metrics.httpFilters.metricOutputResource);
+adminapp.listen(adminHttpPort, function() {
+	logger.info("admin services now listening on %s", adminHttpPort);
 });
