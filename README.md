@@ -7,8 +7,16 @@ The project uses:
 - `bunyan` for logging
 - `morgan` for auto-logging the HTTP request
 
-Quick intro into node for java developers
-=========================================
+I've done a few of these:
+- Node/Express: https://github.com/jasonray/node-express-exploratory
+- Node/Restify: https://github.com/jasonray/node-restify-exploratory
+- Node/Connect: https://github.com/jasonray/node-connect-exploratory
+- JVM/Dropwizard: https://github.com/jasonray/dropwizard-starterkit
+- JVM/Jersey: https://github.com/jasonray/jersey-starterkit
+
+
+Quick intro into node.js for java developers
+============================================
 Node.js is a javascript runtime engine.  It is based google's javascript engine called [v8](https://code.google.com/p/v8/), which is used not only in node but also in the Google Chrome browser.
 
 Not to oversimplify how node can be used, but its big applicable usage is in server-side javascript for implementation of http listeners.  This can be used as the server side implementation of so-called restful web services or in server side controllers for web applications.
@@ -127,3 +135,35 @@ The `pause` service waits for a specified amount of time, then returns an `HTTP 
 ```
 curl -i http://127.0.0.1:8888/pause?duration=3000
 ```
+
+Express Reference
+=================
+
+Links to Express API
+
+Concept of middleware
+
+How to register a handler
+
+How to get request data:
+- path params
+- get params
+- headers
+
+Return a response
+
+Other reference
+===============
+Command line arguments
+
+Make http request
+
+Fork / multi-process
+
+
+
+
+
+
+
+
