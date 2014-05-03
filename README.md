@@ -7,6 +7,14 @@ The project uses:
 - `bunyan` for logging
 - `morgan` for auto-logging the HTTP request
 
+I've done a few of these:
+- Node/Express: https://github.com/jasonray/node-express-exploratory
+- Node/Restify: https://github.com/jasonray/node-restify-exploratory
+- Node/Connect: https://github.com/jasonray/node-connect-exploratory
+- JVM/Dropwizard: https://github.com/jasonray/dropwizard-starterkit
+- JVM/Jersey: https://github.com/jasonray/jersey-starterkit
+
+
 Quick intro into node.js for java developers
 ============================================
 Node.js is a javascript runtime engine.  It is based google's javascript engine called [v8](https://code.google.com/p/v8/), which is used not only in node but also in the Google Chrome browser.
