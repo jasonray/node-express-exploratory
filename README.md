@@ -157,6 +157,10 @@ Other reference
 NPM
 ---
 
+Creating a module
+-----------------
+including how exports works
+
 Log HTTP requests
 -----------------
 [Morgan](https://github.com/expressjs/morgan) is an middleware component that logs the HTTP requests.
