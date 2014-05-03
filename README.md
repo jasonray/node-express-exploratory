@@ -69,8 +69,8 @@ Writing server side logic in tradiitonal server side languages (PHP/.net/Java) f
 The usage of the same platform on the client and the server is a step toward reducing the inefficiency.
 
 
-Install
-=======
+Install It!
+===========
 Install `node` either [manually](http://nodejs.org/download/), or if on a mac and have [homebrew](http://brew.sh), run the following command:
 ```
 brew install node
@@ -81,22 +81,22 @@ After cloning this project, from the root of the project folder, run the followi
 npm install 
 ```
 
-Usage
-=====
+Run It!
+=======
 To run, run `node` with app.js:
 ```
 node app.js
 ```
 
-Logging
--------
 This application formats logging using `bunyan` with json formatted output.  To pretty print the output, use the `bunyan` CLI:
 ```
 node app.js | node_modules/.bin/bunyan
 ```
 
-Shortcut, run `./run.sh` (you may have to `chmod a+x run.sh` to give exectuable rights to the script).
+Or execute `./run.sh` (you may have to `chmod a+x run.sh` to give exectuable rights to the script).
 
+Use It!
+=======
 Hello
 -----
 The `hello` service returns a simple hello world phrase.
