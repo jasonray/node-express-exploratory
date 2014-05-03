@@ -7,32 +7,18 @@ var logger = require('bunyan').createLogger({
 	name: "server"
 });
 
-var morgan = require('morgan');
-var morganLogger = morgan('dev');
-
 // log the request to stdout
-app.use(morganLogger);
+var morgan = require('morgan')('dev');
+app.use(morgan);
 
-// demonstrate that we could create a policy enforcement point (PEP)
-// which would likely call out to a policy decision point (PDP)
-// assume that this would have latency of 500ms
-app.use('/api', function(req, res, next) {
-	logger.info('checking PEP');
-	setTimeout(function() {
-		// logger.info('end PEP');
-		next();
-	}, 500);
-});
+// apply the PEP for all calls under /api
+var pep = require('./lib/pep');
+app.use('/api', pep.enforce);
 
-
+// collect usage metrics for everything under /api and /public
 var metrics = require('statman');
 app.use('/api', metrics.httpFilters.metricCollectionFilter);
 app.use('/public', metrics.httpFilters.metricCollectionFilter);
-
-var util = require('util');
-metrics.register(new metrics.gauge('node-memory', function() {
-	return util.inspect(process.memoryUsage());
-}));
 
 // this would represent an expensive resource with 2000ms latency
 app.get('/api/fetch/expensive', function(req, res, next) {
