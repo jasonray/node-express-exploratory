@@ -7,8 +7,8 @@ The project uses:
 - `bunyan` for logging
 - `morgan` for auto-logging the HTTP request
 
-Quick intro into node for java developers
-=========================================
+Quick intro into node.js for java developers
+============================================
 Node.js is a javascript runtime engine.  It is based google's javascript engine called [v8](https://code.google.com/p/v8/), which is used not only in node but also in the Google Chrome browser.
 
 Not to oversimplify how node can be used, but its big applicable usage is in server-side javascript for implementation of http listeners.  This can be used as the server side implementation of so-called restful web services or in server side controllers for web applications.
