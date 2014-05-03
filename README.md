@@ -17,9 +17,9 @@ I've done a few of these:
 
 Quick intro into node.js for java developers
 ============================================
-Node.js is a javascript runtime engine.  It is based google's javascript engine called [v8](https://code.google.com/p/v8/), which is used not only in node but also in the Google Chrome browser.
+Node.js is a JavaScript runtime engine.  It is based on Google's javascript engine called [v8](https://code.google.com/p/v8/).  V8 is used not only in node.js but also in the Google Chrome browser.
 
-Not to oversimplify how node can be used, but its big applicable usage is in server-side javascript for implementation of http listeners.  This can be used as the server side implementation of so-called restful web services or in server side controllers for web applications.
+At risk of oversimplifing how node.js can be used, its big applicable usage is in server-side javascript for implementation of HTTP listeners.  Specifically, it excels at server side implementation of so-called restful web services and in server side controllers for web applications.
 
 So why the excitement?  We have been doing this in java with a L O N G time.  We have raw TCP listeners and various semantic sugar abstractions for HTTP listeners, servlets, atleast 3 JAX-WS implementations, JAX-RS implementations, and various web frameworks to serve web pages ranging from JSP's to server side MVC.  Why does a different platform make a difference?
 
