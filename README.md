@@ -154,6 +154,22 @@ Return a response
 
 Other reference
 ===============
+Log HTTP requests
+-----------------
+[Morgan](https://github.com/expressjs/morgan) is an middleware component that logs the HTTP requests.
+
+It is initialized through the following.  The literal 'dev' is used a reference to the [formatting](https://github.com/expressjs/morgan#predefined-formats) to use.
+```
+var morgan = require('morgan')('dev');
+app.use(morgan);
+```
+
+Below is an example of the output (although the pretty colors will not show up in this markup)
+```
+GET /api/fetch/light   200 1001ms
+GET /public/index.html 200  11ms
+```
+
 Command line arguments
 
 Make http request
