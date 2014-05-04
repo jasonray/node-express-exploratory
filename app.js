@@ -13,7 +13,7 @@ app.use(morgan);
 
 // apply the PEP for all calls under /api
 var pep = require('./lib/pep');
-// app.use('/api', pep.enforce);
+app.use('/api', pep.enforce);
 
 // collect usage metrics for everything under /api and /public
 var metrics = require('statman');
