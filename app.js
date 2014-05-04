@@ -41,6 +41,9 @@ app.get('/api/fetch/light', function(req, res, next) {
 var labFhirResource = require('./lib/chemlabs/fhir-resource');
 app.get('/api/patient/:patientId/labs', labFhirResource.fetchLabs);
 
+var labFhirResourceAlt = require('./lib/chemlabs/fhir-resource-alt');
+labFhirResourceAlt.bind(app);
+
 // this would represent a very light resource with no latency
 app.get('/public/hello', function(req, res, next) {
 	res.end('hello world\n');
