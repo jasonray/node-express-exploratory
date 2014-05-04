@@ -191,10 +191,10 @@ Fork / multi-process
 --------------------
 
 
-Node References
-===============
+Misc Interesting Reads
+======================
 - The event loop is indeed awesome: http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
-
+- Handling expensive CPU operations with workers: http://stackoverflow.com/questions/3491811/node-js-and-cpu-intensive-requests
 
 
 
