@@ -191,9 +191,12 @@ Fork / multi-process
 --------------------
 
 
-
-
-
+Misc Interesting Reads
+======================
+- The event loop is indeed awesome: http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
+- Handling expensive CPU operations with workers: http://stackoverflow.com/questions/3491811/node-js-and-cpu-intensive-requests
+- Promises: https://www.promisejs.org
+- More on promises: https://blog.jcoglan.com/2013/03/30/callbacks-are-imperative-promises-are-functional-nodes-biggest-missed-opportunity/
 
 
 
