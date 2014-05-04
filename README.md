@@ -191,7 +191,9 @@ Fork / multi-process
 --------------------
 
 
-
+Node References
+===============
+- The event loop is indeed awesome: http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
 
 
 
