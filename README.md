@@ -56,6 +56,9 @@ public Data getData() {
 }
 ```
 
+todo: describe how this requires different paradigm
+
+
 Developer efficiency related to context switching
 -------------------------------------------------
 <snide>The real joy from the hipsters on node.js is that a generation of javascript hackers can now write server side code without the pain of that ugly, so year 2000, java language.</snide>
