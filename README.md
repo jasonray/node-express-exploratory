@@ -37,7 +37,7 @@ Node.js on the other hand uses a single thread during execution.  At first, this
 
 node.js, and really javascript, encourage the use of a event-driven programming paradigm that maximizes this idle/blocked period of a stack's execution.  The convention of using callbacks allows for the single thread of the node engine to do something else while waiting for that database to respond.
 
-I'm not smart enough to describe it well, but consider that many requests are received by node / your application.  The first request is processed, and when it gets to a "call remote system and provide callbacks for what to do when complete" construct, node switches to the next request.  Although it is hard to accept, in systems where you are not doing expensive processing within your code execution stack, this can be much more scalable versus trying to do many things in parallel via threads, each with its overhead of memory and thread switching.
+Consider that many requests are received by node / your application.  The first request is processed, and when it gets to a "call remote system and provide callbacks for what to do when complete" construct, node switches to the next request.  Although it is hard to accept, in systems where you are not doing expensive processing within your code execution stack, this can be much more scalable versus trying to do many things in parallel via threads, each with its overhead of memory and thread switching.
 
 Side note: I get the idea that this paradigm difference is similiar to two common web / proxy servers nginx and apache.  Apache is extermelly feature rich, and thus is very commonly used.  Its scales by utilizing a distinct process (not thread) for each request.  Nginx uses an event-driven paradigm like node.js.  For static files and low complexity scripts, nginx outperforms apache.  (I really want to find one particular study I read a few years back as node gained popularity that really showed the comparison of nginx vs apache that drove home this point.  But cannot find it.  So here are some others (http://www.thegeekstuff.com/2013/11/nginx-vs-apache/) and (http://blog.erratasec.com/2012/10/scalability-is-systemic-anomaly.html#.U2TiCV5vmG4) ).
 
@@ -55,6 +55,9 @@ public Data getData() {
   return data;
 }
 ```
+
+todo: describe how this requires different paradigm
+
 
 Developer efficiency related to context switching
 -------------------------------------------------
