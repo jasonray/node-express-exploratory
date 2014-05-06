@@ -39,7 +39,7 @@ app.get('/api/fetch/light', function(req, res, next) {
 });
 
 require('./lib/widget/widget-resource').bind(app);
-
+require('./lib/streaming-widgets/widget-resource').bind(app);
 
 var labFhirResource = require('./lib/chemlabs/fhir-resource');
 app.get('/api/patient/:patientId/labs', labFhirResource.fetchLabs);
